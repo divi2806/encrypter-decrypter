@@ -1,0 +1,66 @@
+/* Simple, modern dark theme enhancements without extra deps */
+
+:root {
+  --page-max-width: 1080px;
+  --glass-bg: rgba(255, 255, 255, 0.04);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --brand-start: #6ee7f9;
+  --brand-end: #a78bfa;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(1200px 600px at 10% -10%, rgba(110, 231, 249, 0.12), transparent),
+              radial-gradient(800px 500px at 90% 10%, rgba(167, 139, 250, 0.10), transparent),
+              linear-gradient(180deg, #0b0b10 0%, #0d0f14 100%);
+}
+
+.brand-gradient {
+  background: linear-gradient(90deg, var(--brand-start), var(--brand-end));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.page-container {
+  max-width: var(--page-max-width);
+  margin: 0 auto;
+}
+
+.glass-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35), inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+.glass-bar {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  backdrop-filter: blur(8px);
+}
+
+.dropzone {
+  border: 2px dashed var(--glass-border);
+  border-radius: 12px;
+  background: rgba(255,255,255,0.02);
+  transition: background 150ms ease, border-color 150ms ease;
+}
+
+.dropzone.active {
+  background: rgba(255,255,255,0.06);
+  border-color: var(--brand-start);
+}
+
+.muted-link {
+  text-decoration: underline;
+  color: inherit;
+  opacity: 0.9;
+}
+
+
